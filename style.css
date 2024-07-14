@@ -1,9 +1,10 @@
 .content {
     height: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
+    column-gap: 16px;
     justify-content: space-between;
     background: #EBF0FA;
     margin: 36px 40px;
@@ -26,8 +27,8 @@
 }
 
 .text {
-    width: 511px;
-    height: 81px;
+    max-width: 511px;
+    height: auto;
     font-size: 17px;
     font-weight: 400;
     line-height: 27.2px;
@@ -37,7 +38,7 @@
 }
 
 .btn {
-    width: 341px;
+    max-width: 341px;
     height: 68px;
     display: flex;
     flex-direction: row;
@@ -62,8 +63,108 @@
 }
 
 .block-img > img{
-    /*width: 100%;*/
-    /*height: auto;*/
+    width: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .block-info {
+        padding: 24px;
+    }
+
+    .text-header {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .text {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 24px;
+        margin: 18px 0 24px;
+    }
+
+    .btn {
+        width: 261px;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 19px 12px 19px 24px;
+        border-radius: 60px;
+        background: #244C98;
+        border: none;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .img-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .block-img > img{
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .block-info {
+        padding: 24px;
+    }
+
+    .text-header {
+        font-size: 17px;
+        line-height: 27.2px;
+    }
+
+    .text {
+        max-width: 100%;
+        height: auto;
+        margin: 14px 0 18px;
+        font-size: 13px;
+        line-height: 20.8px;
+    }
+
+    .btn {
+        width: 100%;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+        padding: 19px 12px 19px 24px;
+        border-radius: 60px;
+        background: #244C98;
+        border: none;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .img-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .block-img > img{
+        border-radius: 10px;
+    }
 }
